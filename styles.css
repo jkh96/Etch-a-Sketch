@@ -1,0 +1,53 @@
+body html {
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+main {
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+    /* display: grid;
+    grid-template-columns: auto 27% 27% 27% ;
+    grid-template-rows: 10% 40% 40% 10%  ;
+    grid-template-areas: 
+    "header  header header header"
+    "sidebar main   main   main"
+    "sidebar main   main   main"
+    "footer  footer footer footer"; */
+}
+
+aside {
+    background-color: darkgray;
+    margin-bottom: 10px;
+    padding: 20px;
+    width: 200px;
+}
+
+button{
+    justify-content: center;
+}
+
+#btn {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    font-weight: 100;
+}    
+    
+
+#wrapper {
+    background-color: darkgray;
+    border-radius: 4px;
+}
+
+
+footer {
+    text-align: center;
+}
