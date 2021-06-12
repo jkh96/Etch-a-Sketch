@@ -11,26 +11,14 @@
 <body>
     
     <header>
-        <h1>Sketchpad</h1>
-    </header>
-    <main>   
-        <aside>
-            <button id="btn">Red</button>
-            <button id="btn">Blue</button>
-            <button id="btn">Black</button>
-            <button id="btn">undefined</button>
-            <button id="btn">undefined</button>
-            <button id="btn">undefined</button>
-            <button id="btn">Erase</button>
-        </aside>
-
-        <section id="sketchpad">
-            <h3>Sketch</h3>
-        </section>
-    </main>
-    <footer>
-        <p>Created by JKH</p>
-    </footer>
+        <h1>Sketch</h1>
+      </header>
+      <div class='button'>
+        <button onclick="newGrid()">New Grid</button>
+         <button onclick="erase()">Erase</button>
+         <button onclick="fillColor('blue')">Blue</button>
+      </div>  
+       
 
     <script src="script.js"></script>
 </body>
