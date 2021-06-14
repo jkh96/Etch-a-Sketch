@@ -13,6 +13,7 @@ window.addEventListener('load', setDefault)
 function setDefault() {
     setlayout(16)
     createDivs(16)
+    fillColor('black')
 }
 
 function setlayout(size) {
@@ -27,12 +28,8 @@ function createDivs(number) {
 for (let i = 0; i < number * number; i++) {
     const grid = document.createElement('div');
     grid.classList.add('grid')
-    // container.style.display = 'grid';
-    // container.style.gridTemplateColumns = `repeat(${number}, 1fr)`;
-    // container.style.gridTemplateRows = `repeat(${number}, 1fr)`;
     grid.style.border = "1px solid black"
     container.appendChild(grid);
-    // grid.addEventListener("mouseover", fillColor)
   }
 }
 
@@ -44,19 +41,15 @@ function fillColor(color) {
             if (color == 'blue') {
                 e.target.style.backgroundColor = 'rgb(0, 102, 255)';
                 e.target.style.opacity = 1;
-            } else {
-                e.target.style.backgroundColor = 'rgb(0, 0, 0)'
+            } else if (color == 'red') {
+                e.target.style.backgroundColor = 'rgb(255, 0, 0)'
+            }else if (color == 'black') {
+             e.target.style.backgroundColor = 'rgb(0, 0, 0)'
             }
         })
     })
 }
-//   if (color == 'blue') {
-//     this.style.backgroundColor = `rgb(0, 102, 255)`
-//   } else if (color == 'red') {
-//     this.style.backgroundColor = `rgb(255, 0, 0)`
-//   } else (color == 'black' ) 
-//     this.style.backgroundColor = `rgb(0, 0, 0)`
-//   }
+
   
 // remove grid
 function gridErase(){
@@ -80,8 +73,6 @@ function erase() {
 // Look up how this for each function works!!!!!!!!
   gridItems.forEach((item) => {
     item.style.removeProperty('background-color')
-    // item.style.backgroundColor = '#ffff'
-    // item.style.opacity = '1';
   });
 }
 
@@ -96,8 +87,5 @@ function newGrid() {
     gridErase();
     setlayout(newSize);
     createDivs(newSize);
+    fillColor('black');
 }
-
-/* Things to do!!! 
-clean up fillColor function!
-*/
